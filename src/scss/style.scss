@@ -1,0 +1,96 @@
+// Normalize.css
+@import "../../node_modules/normalize.css/normalize";
+// Bootstrap
+@import '../../node_modules/bootstrap/scss/bootstrap-grid';
+
+// Шрифты
+// Удалить файл fonts.scss, если произошли какие-то изменения со шрифтами
+@import "fonts";
+
+// Переменны (цвета, скорость transition и пр)
+@import "_variables";
+
+@import "_header";
+@import "_footer";
+
+*{
+  outline: none;
+  box-sizing: border-box;
+}
+
+html {
+  height: 100%;
+}
+
+body{
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  min-width: 360px;
+  overflow-x: hidden;
+  font-family: $main_font;
+  main {
+    flex: 1 0 auto;
+    padding: 30px 0;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    font-family: $title_font;
+  }
+  a {
+    text-decoration: none;
+  }
+
+  .button {
+    position: relative;
+    display: block;
+    padding: 16px 25px;
+    background: $focus_color;
+    overflow: hidden;
+    span {
+      display: block;
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 18px;
+      color: $main_color;
+      @media (min-width: 992px) {
+        font-size: 16px;
+        line-height: 28px;
+      }
+    }
+    &::before {
+      content: '';
+      display: block;
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      border: 0px solid #fff;
+      pointer-events: none;
+      opacity: 0;
+      @media (min-width: 992px) {
+        transition: all $animation_speed;
+      }
+    }
+    @media (min-width: 992px) {
+      &:hover {
+        &::before {
+          opacity: .5;
+          border: 5px solid #fff;
+        }
+      }
+    }
+    &.tel {
+      padding: 10px 24px;
+      @media (min-width: 992px) {
+        padding: 9px 30px 8px;
+      }
+      span {
+        font-weight: 400;
+        font-family: $helping_font;
+      }
+    }
+  }
+}
