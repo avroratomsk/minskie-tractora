@@ -33,6 +33,10 @@ body{
   min-width: 360px;
   overflow-x: hidden;
   font-family: $main_font;
+  font-size: 14px;
+  @media (min-width: 768px) {
+    font-size: 20px;
+  }
   main {
     flex: 1 0 auto;
   }
@@ -75,8 +79,8 @@ body{
 
   .button {
     position: relative;
-    display: block;
-    padding: 16px 25px;
+    display: inline-block;
+    padding: 16px 40px;
     background: $focus_color;
     overflow: hidden;
     span {
