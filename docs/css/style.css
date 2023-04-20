@@ -1881,6 +1881,38 @@ template {
   max-height: 100%;
 }
 
+.about {
+  padding: 50px 0;
+}
+
+.about_cards .item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 15px 0;
+}
+
+.about_cards .item div {
+  width: 125px;
+  height: 90px;
+  margin-right: 20px;
+  background-color: #962933;
+}
+
+.about_cards .item p {
+  display: block;
+  width: calc(100% - 125px - 20px);
+  margin: 0;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 140%;
+}
+
 * {
   outline: none;
   -webkit-box-sizing: border-box;
@@ -1920,6 +1952,35 @@ body h4,
 body h5,
 body h6 {
   font-family: Bebas_Neue;
+  line-height: 1;
+}
+
+body .title {
+  font-weight: 700;
+  line-height: 90%;
+  color: #0D2537;
+  margin-bottom: 36px;
+}
+
+body .title.white {
+  color: #FFFFFF;
+}
+
+body .title.red {
+  color: #962933;
+}
+
+body .title h1,
+body .title h2 {
+  margin: 0;
+}
+
+body .title h1 {
+  font-size: 64px;
+}
+
+body .title h2 {
+  font-size: 64px;
 }
 
 body a {
@@ -2934,6 +2995,16 @@ body .button.tel span {
     top: 20px;
     bottom: 0px;
     max-height: 400px;
+  }
+
+  .about_cards .item div {
+    width: 175px;
+    height: 140px;
+  }
+
+  .about_cards .item p {
+    width: calc(100% - 175px - 20px);
+    font-size: 20px;
   }
 }
 
@@ -3956,6 +4027,18 @@ body .button.tel span {
     top: 22px;
     bottom: -58px;
     max-height: 588px;
+  }
+
+  .about {
+    padding: 100px 0;
+  }
+
+  body .title h1 {
+    font-size: 128px;
+  }
+
+  body .title h2 {
+    font-size: 52px;
   }
 }
 

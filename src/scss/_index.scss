@@ -84,3 +84,40 @@
     }
   }
 }
+
+.about {
+  padding: 50px 0;
+  @media (min-width: 768px) {
+    padding: 100px 0;
+  }
+  &_cards {
+    .item {
+      display: flex;
+      flex-wrap: nowrap;
+      align-items: center;
+      margin: 15px 0;
+      div {
+        width: 125px;
+        height: 90px;
+        margin-right: 20px;
+        background-color: $focus_color;
+        @media (min-width: 576px) {
+          width: 175px;
+          height: 140px;
+        }
+      }
+      p {
+        display: block;
+        width: calc(100% - 125px - 20px);
+        margin: 0;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 140%;
+        @media (min-width: 576px) {
+          width: calc(100% - 175px - 20px);
+          font-size: 20px;
+        }
+      }
+    }
+  }
+}
