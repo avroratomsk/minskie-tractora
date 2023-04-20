@@ -3850,10 +3850,18 @@ body .button.tel span {
     padding: 36px 0 14px;
   }
 
+  .footer .menu {
+    margin: 0;
+  }
+
   .footer .social {
     -webkit-box-pack: right;
         -ms-flex-pack: right;
             justify-content: right;
+  }
+
+  .footer .contacts {
+    margin: 0;
   }
 }
 
