@@ -13,6 +13,8 @@
 @import "_header";
 @import "_footer";
 
+@import "_index";
+
 *{
   outline: none;
   box-sizing: border-box;
@@ -33,7 +35,6 @@ body{
   font-family: $main_font;
   main {
     flex: 1 0 auto;
-    padding: 30px 0;
   }
   h1, h2, h3, h4, h5, h6 {
     font-family: $title_font;

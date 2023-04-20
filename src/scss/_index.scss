@@ -1,0 +1,86 @@
+.banner {
+  position: relative;
+  overflow: hidden;
+  background-color: $focus_color;
+  @media (min-width: 576px) {
+    background-color: initial;
+    &::after {
+      content: '';
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 30%;
+      bottom: 0;
+      background-color: $focus_color;
+    }
+  }
+  .text {
+    padding: 34px 0 44px;
+    position: relative;
+    width: 200px;
+    z-index: 1;
+    color: $main_color;
+    @media (min-width: 768px) {
+      padding: 70px 0;
+      width: 400px;
+    }
+    .title {
+      display: block;
+      font-weight: 700;
+      font-size: 64px;
+      line-height: .9;
+      font-family: $title_font;
+      @media (min-width: 768px) {
+        font-size: 128px;
+      }
+    }
+    .descr {
+      margin-top: 150px;
+      display: block;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 24px;
+      @media (min-width: 768px) {
+        font-size: 20px;
+      }
+      @media (min-width: 576px) {
+        margin-top: 10px;
+      }
+    }
+  }
+
+  .container {
+    position: relative;
+  }
+
+  .tractor {
+    position: absolute;
+    z-index: 1;
+    top: 53px;
+    left: 65px;
+    bottom: 24px;
+    max-height: 340px;
+    @media (min-width: 992px) {
+      right: 0;
+      left: initial;
+    }
+    @media (min-width: 768px) {
+      left: 230px;
+      top: 22px;
+      bottom: -58px;
+      max-height: 588px;
+    }
+    @media (min-width: 576px) {
+      left: 230px;
+      top: 20px;
+      bottom: 0px;
+      max-height: 400px;
+    }
+    img {
+      display: block;
+      width: auto;
+      max-height: 100%;
+    }
+  }
+}

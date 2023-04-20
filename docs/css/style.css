@@ -1832,6 +1832,55 @@ template {
   font-weight: 600;
 }
 
+.banner {
+  position: relative;
+  overflow: hidden;
+  background-color: #962933;
+}
+
+.banner .text {
+  padding: 34px 0 44px;
+  position: relative;
+  width: 200px;
+  z-index: 1;
+  color: #FFFFFF;
+}
+
+.banner .text .title {
+  display: block;
+  font-weight: 700;
+  font-size: 64px;
+  line-height: 0.9;
+  font-family: Bebas_Neue;
+}
+
+.banner .text .descr {
+  margin-top: 150px;
+  display: block;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.banner .container {
+  position: relative;
+}
+
+.banner .tractor {
+  position: absolute;
+  z-index: 1;
+  top: 53px;
+  left: 65px;
+  bottom: 24px;
+  max-height: 340px;
+}
+
+.banner .tractor img {
+  display: block;
+  width: auto;
+  max-height: 100%;
+}
+
 * {
   outline: none;
   -webkit-box-sizing: border-box;
@@ -1862,7 +1911,6 @@ body main {
   -webkit-box-flex: 1;
       -ms-flex: 1 0 auto;
           flex: 1 0 auto;
-  padding: 30px 0;
 }
 
 body h1,
@@ -2860,6 +2908,32 @@ body .button.tel span {
 
   .header .info {
     display: block;
+  }
+
+  .banner {
+    background-color: initial;
+  }
+
+  .banner::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 30%;
+    bottom: 0;
+    background-color: #962933;
+  }
+
+  .banner .text .descr {
+    margin-top: 10px;
+  }
+
+  .banner .tractor {
+    left: 230px;
+    top: 20px;
+    bottom: 0px;
+    max-height: 400px;
   }
 }
 
@@ -3862,6 +3936,26 @@ body .button.tel span {
 
   .footer .contacts {
     margin: 0;
+  }
+
+  .banner .text {
+    padding: 70px 0;
+    width: 400px;
+  }
+
+  .banner .text .title {
+    font-size: 128px;
+  }
+
+  .banner .text .descr {
+    font-size: 20px;
+  }
+
+  .banner .tractor {
+    left: 230px;
+    top: 22px;
+    bottom: -58px;
+    max-height: 588px;
   }
 }
 
@@ -4893,6 +4987,11 @@ body .button.tel span {
 
   .footer .contacts .item a:hover {
     opacity: 0.75;
+  }
+
+  .banner .tractor {
+    right: 0;
+    left: initial;
   }
 
   body .button span {
