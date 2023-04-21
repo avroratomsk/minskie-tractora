@@ -1987,6 +1987,64 @@ template {
   left: -24px;
 }
 
+.technique {
+  padding: 50px 0;
+}
+
+.technique_cards .item {
+  display: block;
+  position: relative;
+  margin: 5px 0;
+  background-color: #962933;
+  height: 215px;
+  overflow: hidden;
+}
+
+.technique_cards .item .brend {
+  position: absolute;
+  top: 23px;
+  left: 20px;
+  background: #FFFFFF;
+  padding: 5px 15px;
+}
+
+.technique_cards .item .brend img {
+  display: block;
+}
+
+.technique_cards .item .title {
+  position: absolute;
+  bottom: 28px;
+  left: 20px;
+}
+
+.technique_cards .item .title > *::before {
+  content: attr(back-text);
+  font-size: 64px;
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  opacity: 0.2;
+  white-space: nowrap;
+}
+
+.technique_cards .item .image {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  z-index: 3;
+}
+
+.technique_cards .item .image img {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  max-height: 100%;
+  max-width: 80%;
+}
+
 * {
   outline: none;
   -webkit-box-sizing: border-box;
@@ -2054,16 +2112,16 @@ body .title h4 {
 
 body .title h2 {
   font-size: 64px;
-  margin-bottom: 40px;
+  margin-bottom: 20px;
 }
 
 body .title h3 {
-  font-size: 64px;
-  margin-bottom: 30px;
+  font-size: 52px;
+  margin-bottom: 15px;
 }
 
 body .title h4 {
-  font-size: 40px;
+  font-size: 24px;
 }
 
 body a {
@@ -4124,16 +4182,35 @@ body .button.tel span {
     left: calc((24px + (100vw - 720px + 24px) / 2) * -1);
   }
 
+  .technique {
+    padding: 100px 0;
+  }
+
+  .technique_cards .item {
+    margin: 15px 0;
+  }
+
+  .technique_cards .item .title > *::before {
+    font-size: 100px;
+    bottom: 4px;
+  }
+
   body {
     font-size: 20px;
   }
 
   body .title h2 {
     font-size: 128px;
+    margin-bottom: 40px;
   }
 
   body .title h3 {
-    font-size: 52px;
+    font-size: 64px;
+    margin-bottom: 30px;
+  }
+
+  body .title h4 {
+    font-size: 40px;
   }
 }
 
@@ -5211,6 +5288,16 @@ body .button.tel span {
     bottom: initial;
     width: 50vw;
     height: 315px;
+  }
+
+  .technique_cards a.item {
+    -webkit-transition: all 0.25s;
+    -o-transition: all 0.25s;
+    transition: all 0.25s;
+  }
+
+  .technique_cards a.item:hover {
+    background-color: #0D2537;
   }
 
   body .button span {

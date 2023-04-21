@@ -218,3 +218,80 @@
     }
   }
 }
+
+.technique {
+  padding: 50px 0;
+  @media (min-width: 768px) {
+    padding: 100px 0;
+  }
+  &_cards {
+    a.item {
+      @media (min-width: 992px) {
+        transition: all $animation_speed;
+        &:hover {
+          background-color: $therd_color;
+        }
+      }
+    }
+    .item {
+      display: block;
+      position: relative;
+      margin: 5px 0;
+      background-color: $focus_color;
+      height: 215px;
+      overflow: hidden;
+      @media (min-width: 768px) {
+        margin: 15px 0;
+      }
+      .brend {
+        position: absolute;
+        top: 23px;
+        left: 20px;
+        background: $main_color;
+        padding: 5px 15px;
+        img {
+          display: block;
+        }
+      }
+      .title {
+        position: absolute;
+        bottom: 28px;
+        left: 20px;
+        & > * {
+          &::before {
+            content: attr(back-text);
+            font-size: 64px;
+            position: absolute;
+            left: 0;
+            bottom: -4px;
+            opacity: 0.2;
+            white-space: nowrap;
+            @media (min-width: 768px) {
+              font-size: 100px;
+              bottom: 4px;
+            }
+          }
+        }
+      }
+      .image {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        z-index: 3;
+        img {
+          position: absolute;
+          bottom: 0;
+          right: 0;
+          max-height: 100%;
+          max-width: 80%;
+          // width: 250px;
+          // @media (min-width: 768px) {
+          //   width: initial;
+          // }
+        }
+      }
+    }
+  }
+}
