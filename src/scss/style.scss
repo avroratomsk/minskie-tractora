@@ -120,11 +120,20 @@ body{
         transition: all $animation_speed;
       }
     }
+    &.white {
+      background: $main_color;
+      span {
+        color: $therd_color;
+      }
+      &::before {
+        border-color: $therd_color;
+      }
+    }
     @media (min-width: 992px) {
       &:hover {
         &::before {
           opacity: .5;
-          border: 5px solid #fff;
+          border-width: 5px;
         }
       }
     }
@@ -137,6 +146,40 @@ body{
         font-weight: 400;
         font-family: $helping_font;
       }
+    }
+  }
+}
+
+.offer {
+  padding: 55px 0 50px;
+  background-color: $therd_color;
+  color: $main_color;
+  position: relative;
+  .bg_text {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    font-family: $title_font;
+    line-height: .9;
+    font-size: 342px;
+    opacity: 0.06;
+  }
+  .title {
+    & > * {
+      margin: 0;
+    }
+  }
+  .button {
+    margin-top: 44px;
+  }
+  .tractor {
+    position: relative;
+    height: 100%;
+    img {
+      position: absolute;
+      width: 100%;
+      left: 0;
+      bottom: -90px;
     }
   }
 }

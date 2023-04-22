@@ -2157,6 +2157,18 @@ body .button::before {
   opacity: 0;
 }
 
+body .button.white {
+  background: #FFFFFF;
+}
+
+body .button.white span {
+  color: #0D2537;
+}
+
+body .button.white::before {
+  border-color: #0D2537;
+}
+
 body .button.tel {
   padding: 10px 24px;
 }
@@ -2164,6 +2176,43 @@ body .button.tel {
 body .button.tel span {
   font-weight: 400;
   font-family: Inter;
+}
+
+.offer {
+  padding: 55px 0 50px;
+  background-color: #0D2537;
+  color: #FFFFFF;
+  position: relative;
+}
+
+.offer .bg_text {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  font-family: Bebas_Neue;
+  line-height: 0.9;
+  font-size: 342px;
+  opacity: 0.06;
+}
+
+.offer .title > * {
+  margin: 0;
+}
+
+.offer .button {
+  margin-top: 44px;
+}
+
+.offer .tractor {
+  position: relative;
+  height: 100%;
+}
+
+.offer .tractor img {
+  position: absolute;
+  width: 100%;
+  left: 0;
+  bottom: -90px;
 }
 
 @media (min-width: 576px) {
@@ -5313,7 +5362,7 @@ body .button.tel span {
 
   body .button:hover::before {
     opacity: 0.5;
-    border: 5px solid #fff;
+    border-width: 5px;
   }
 
   body .button.tel {
