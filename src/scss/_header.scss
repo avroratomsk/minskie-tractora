@@ -1,6 +1,8 @@
 .header {
   flex: 0 0 auto;
   background: $main_color;
+  position: relative;
+  z-index: 9;
   .container {
     position: relative;
   }

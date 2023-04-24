@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    @@include('html/head.html', {
+        "title":"Главная"
+    })
+    <body>
+        @@include('html/_header.html')
+
+        <main>
+            <section class="catalog">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12 col-md-4 col-lg-3">
+                            @@include('html/_catalog_sidebar.html')
+                        </div>
+                        <div class="col-12 col-md-8 col-lg-9">
+                            @@include('html/_catalog_content.html')
+                        </div>
+                    </div>
+                </div>
+            </section>
+            @@include('html/_offer_light.html')
+        </main>
+
+        @@include('html/_footer.html')
+
+        <script src="js/app.min.js"></script>
+    </body>
+</html>

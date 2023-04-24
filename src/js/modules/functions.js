@@ -17,7 +17,7 @@ export function isWebp() {
 	});
 }
 
-/* Поиск города на главной */
+/* Меню второго порядка */
 export function subMenu(){
 	const subMenuToggle = document.querySelectorAll('.header .toggle_item');
 
@@ -38,7 +38,7 @@ export function subMenu(){
 
 }
 
-/* Поиск города на главной */
+/* Открытие/Скритие меню в шапке */
 export function openMenu(){
 	const openMenuButton = document.querySelector('.header .openMenu');
 	const menuElement = document.querySelector('.main-menu');
@@ -53,6 +53,27 @@ export function openMenu(){
 			} else {
 				this.classList.add("open");
 				menuElement.classList.add("open");
+			}
+		}
+	}
+
+}
+
+/* Меню второго порядка */
+export function sidebarToggles(){
+	const sidebarItems = document.querySelectorAll('.sidebar .item');
+
+	if (sidebarItems) {
+		sidebarItems.forEach(function (item) {
+			item.addEventListener("click", toggleItem);
+			return true;
+		});
+
+		function toggleItem () {
+			if (this.classList.contains("open")) {
+				this.classList.remove("open");
+			} else {
+				this.classList.add("open");
 			}
 		}
 	}

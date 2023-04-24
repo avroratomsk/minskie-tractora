@@ -13,8 +13,10 @@
 @import "_header";
 @import "_footer";
 
-@import "_index";
 @import "_offer";
+
+@import "_index";
+@import "_catalog";
 
 *{
   outline: none;
@@ -83,6 +85,33 @@ body{
       @media (min-width: 768px) {
         font-size: 40px;
       }
+    }
+  }
+
+  .breadcrumbs {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 10px;
+    a, span {
+      position: relative;
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 170%;
+      color: rgba($therd_color, .7);
+      display: block;
+      & + * {
+        padding-left: 20px;
+        &::before {
+          content: "/";
+          display: block;
+          position: absolute;
+          top: 0;
+          left: 7px;
+        }
+      }
+    }
+    span {
+      color: $therd_color;
     }
   }
 
