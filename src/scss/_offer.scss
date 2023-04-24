@@ -1,0 +1,90 @@
+﻿.offer {
+  padding: 55px 0 0;
+  background-color: $therd_color;
+  color: $main_color;
+  position: relative;
+  @media (min-width: 992px) {
+    padding-bottom: 50px;
+  }
+  &::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 24px;
+    background: $main_color;
+    @media (min-width: 992px) {
+      display: none;
+    }
+  }
+  .bg_text {
+    position: absolute;
+    // top: 0;
+    transform: rotate(90deg);
+    font-family: $title_font;
+    line-height: .9;
+    font-size: 128px;
+    opacity: 0.06;
+    overflow: hidden;
+    transform: rotate(90deg);
+    top: 135px;
+    right: -90px;
+    @media (min-width: 992px) {
+      transform: rotate(0);
+      top: 0;
+      left: 50%;
+      right: initial;
+      font-size: 342px;
+      width: 50%;
+    }
+  }
+  .title {
+    & > * {
+      margin: 0;
+      @media (max-width: 991px) {
+        color: $main_color;
+      }
+    }
+  }
+
+  .button {
+    margin-top: 44px;
+  }
+  .tractor {
+    position: relative;
+    height: 100%;
+    margin: -10px -12px 0;
+    overflow-x: hidden;
+    @media (min-width: 576px) {
+      overflow-x: initial;
+    }
+    img {
+      position: relative;
+      width: 100%;
+      left: 65px;
+      z-index: 1;
+      @media (min-width: 992px) {
+        position: absolute;
+        bottom: -90px;
+      }
+      @media (min-width: 576px) {
+        left: 0;
+      }
+    }
+  }
+
+  &.light {
+    background-color: $secondary_color;
+    color: $therd_color;
+
+    .title {
+      & > * {
+        @media (max-width: 991px) {
+          color: $therd_color;
+        }
+      }
+    }
+  }
+}
