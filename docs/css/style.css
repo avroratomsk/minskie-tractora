@@ -2306,6 +2306,127 @@ template {
   color: #0D2537;
 }
 
+.product {
+  padding: 30px 0;
+}
+
+.product .main_information {
+  margin-top: 30px;
+  position: relative;
+}
+
+.product .main_information .image {
+  position: relative;
+  max-width: 100%;
+  max-height: 432px;
+  height: 100%;
+  margin-bottom: 30px;
+}
+
+.product .main_information .image img {
+  display: block;
+  max-width: 100%;
+  max-height: 100%;
+  margin: 0 auto;
+}
+
+.product .text {
+  color: rgba(35, 39, 38, 0.7);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 30px;
+}
+
+.product .text p {
+  margin: 0;
+}
+
+.product .text p + p {
+  margin-top: 15px;
+}
+
+.product .text .head {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin-bottom: 25px;
+}
+
+.product .text .head::after {
+  content: "";
+  width: 100%;
+  position: absolute;
+  bottom: 1px;
+  left: 0;
+  height: 1px;
+  background: #EDEDED;
+  z-index: -1;
+}
+
+.product .text .head span {
+  position: relative;
+  display: block;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 30px;
+  color: #0D2537;
+  padding-bottom: 10px;
+}
+
+.product .text .head span::after {
+  content: "";
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 3px;
+  background: #0D2537;
+}
+
+.product .buttons_line {
+  margin-top: 30px;
+}
+
+.product .table_list {
+  margin-top: 50px;
+}
+
+.product .table_list .table {
+  margin-top: 30px;
+}
+
+.product .table_list .table .line {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  padding: 10px 15px;
+  background: #FFFFFF;
+}
+
+.product .table_list .table .line:nth-child(even) {
+  background: #F4F4F4;
+}
+
+.product .table_list .table .line.name span {
+  font-weight: 700;
+  color: #962933;
+}
+
+.product .table_list .table .line div {
+  width: 100%;
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+.product .table_list .table .line div:nth-child(1) {
+  font-weight: 700;
+}
+
 * {
   outline: none;
   -webkit-box-sizing: border-box;
@@ -2370,10 +2491,16 @@ body .title.red {
   color: #962933;
 }
 
+body .title h1,
 body .title h2,
 body .title h3,
 body .title h4 {
   margin: 0;
+}
+
+body .title h1 {
+  font-size: 52px;
+  margin-bottom: 20px;
 }
 
 body .title h2 {
@@ -2431,6 +2558,18 @@ body .breadcrumbs span {
   overflow: hidden;
 }
 
+body .back {
+  margin-left: auto;
+  display: block;
+  width: 150px;
+  text-align: center;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.4;
+  text-transform: uppercase;
+  color: #962933;
+}
+
 body a {
   text-decoration: none;
 }
@@ -2441,6 +2580,8 @@ body .button {
   padding: 16px 40px;
   background: #962933;
   overflow: hidden;
+  color: #FFFFFF;
+  font-size: 16px;
 }
 
 body .button span {
@@ -3480,6 +3621,20 @@ body .button.tel span {
 
   .catalog .sidebar {
     top: 114px;
+  }
+
+  .product .table_list .table .line div {
+    font-size: 16px;
+  }
+
+  .product .table_list .table .line div:nth-child(1) {
+    width: 40%;
+    padding-right: 15px;
+    font-weight: 400;
+  }
+
+  .product .table_list .table .line div:nth-child(2) {
+    width: 60%;
   }
 }
 
@@ -4543,6 +4698,11 @@ body .button.tel span {
 
   body {
     font-size: 20px;
+  }
+
+  body .title h1 {
+    font-size: 64px;
+    margin-bottom: 30px;
   }
 
   body .title h2 {
@@ -5741,6 +5901,40 @@ body .button.tel span {
     -webkit-transform: translate(-50%, -50%) scale(1.1);
         -ms-transform: translate(-50%, -50%) scale(1.1);
             transform: translate(-50%, -50%) scale(1.1);
+  }
+
+  .product {
+    padding: 50px 0 110px;
+  }
+
+  .product .main_information {
+    margin-top: 50px;
+  }
+
+  .product .main_information::after {
+    content: "";
+    width: 30%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    background: #F4F4F4;
+    z-index: -1;
+  }
+
+  .product .main_information .image {
+    margin-bottom: 0;
+  }
+
+  .product .main_information .image img {
+    position: absolute;
+    max-width: 100%;
+    max-height: 100%;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
   }
 
   body.no-scroll {

@@ -1,0 +1,140 @@
+﻿.product {
+  padding: 30px 0;
+  @media (min-width: 992px) {
+    padding: 50px 0 110px;
+  }
+  
+  .main_information {
+    margin-top: 30px;
+    position: relative;
+    @media (min-width: 992px) {
+      margin-top: 50px;
+      &::after {
+        content: '';
+        width: 30%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        background: $secondary_color;
+        z-index: -1;
+      }
+    }
+    .image {
+      position: relative;
+      max-width: 100%;
+      max-height: 432px;
+      height: 100%;
+      margin-bottom: 30px;
+      @media (min-width: 992px) {
+        margin-bottom: 0;
+      }
+      img {
+        display: block;
+        max-width: 100%;
+        max-height: 100%;
+        margin: 0 auto;
+        @media (min-width: 992px) {
+          position: absolute;
+          max-width: 100%;
+          max-height: 100%;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+        }
+      }
+    }
+  }
+
+  .text {
+    color: rgba(35, 39, 38, 0.7);
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 30px;
+    p {
+      margin: 0;
+      & + p {
+        margin-top: 15px;
+      }
+    }
+    .head {
+      position: relative;
+      display: flex;
+      flex-wrap: wrap;
+      margin-bottom: 25px;
+      &::after {
+        content: '';
+        width: 100%;
+        position: absolute;
+        bottom: 1px;
+        left: 0;
+        height: 1px;
+        background: #EDEDED;
+        z-index: -1;
+      }
+      span {
+        position: relative;
+        display: block;
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 30px;
+        color: $therd_color;
+        padding-bottom: 10px;
+        &::after {
+          content: '';
+          width: 100%;
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          height: 3px;
+          background: $therd_color;
+        }
+      }
+    }
+  }
+
+  .buttons_line {
+    margin-top: 30px;
+  }
+
+  .table_list {
+    margin-top: 50px;
+    .table {
+      margin-top: 30px;
+      .line {
+        display: flex;
+        flex-wrap: wrap;
+        padding: 10px 15px;
+        background: $main_color;
+        &:nth-child(even) {
+          background: $secondary_color;
+        }
+        &.name {
+          span {
+            font-weight: 700;
+            color: $focus_color;
+          }
+        }
+        div {
+          width: 100%;
+          font-size: 14px;
+          line-height: 1.4;
+          &:nth-child(1) {
+            font-weight: 700;
+          }
+          @media (min-width: 576px) {
+            font-size: 16px;
+            &:nth-child(1) {
+              width: 40%;
+              padding-right: 15px;
+              font-weight: 400;
+            }
+            &:nth-child(2) {
+              width: 60%;
+            }
+          }
+        }
+      }
+    }
+  }
+}

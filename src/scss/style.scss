@@ -17,6 +17,7 @@
 
 @import "_index";
 @import "_catalog";
+@import "_product";
 
 *{
   outline: none;
@@ -69,8 +70,16 @@ body{
     &.red {
       color: $focus_color;
     }
-    h2, h3, h4 {
+    h1, h2, h3, h4 {
       margin: 0;
+    }
+    h1 {
+      font-size: 52px;
+      margin-bottom: 20px;
+      @media (min-width: 768px) {
+        font-size: 64px;
+        margin-bottom: 30px;
+      }
     }
     h2 {
       font-size: 64px;
@@ -126,6 +135,18 @@ body{
     }
   }
 
+  .back {
+    margin-left: auto;
+    display: block;
+    width: 150px;
+    text-align: center;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.4;
+    text-transform: uppercase;
+    color: $focus_color;
+  }
+
   a {
     text-decoration: none;
   }
@@ -136,6 +157,8 @@ body{
     padding: 16px 40px;
     background: $focus_color;
     overflow: hidden;
+    color: $main_color;
+    font-size: 16px;
     span {
       display: block;
       font-weight: 500;
