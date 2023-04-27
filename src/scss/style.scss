@@ -38,6 +38,14 @@ body{
   overflow-x: hidden;
   font-family: $main_font;
   font-size: 14px;
+  &.no-scroll {
+    overflow: hidden;
+  }
+  @media (min-width: 992px) {
+    &.no-scroll {
+      overflow: initial;
+    }
+  }
   @media (min-width: 768px) {
     font-size: 20px;
   }
@@ -90,7 +98,7 @@ body{
 
   .breadcrumbs {
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     margin-bottom: 10px;
     a, span {
       position: relative;
@@ -99,6 +107,7 @@ body{
       line-height: 170%;
       color: rgba($therd_color, .7);
       display: block;
+      white-space: nowrap;
       & + * {
         padding-left: 20px;
         &::before {
@@ -112,6 +121,8 @@ body{
     }
     span {
       color: $therd_color;
+      text-overflow: ellipsis;
+      overflow: hidden;
     }
   }
 

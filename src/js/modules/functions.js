@@ -79,3 +79,25 @@ export function sidebarToggles(){
 	}
 
 }
+
+/* Открытие/Скритие меню в шапке */
+export function openFilter(){
+	const sidebar = document.querySelector('.sidebar');
+	const openCatalog = document.querySelector('.openCatalog');
+	const closeButton = document.querySelector('.sidebar .close');
+
+	if (openCatalog) {
+		openCatalog.addEventListener("click", toggleMenu);
+
+		closeButton.addEventListener("click", toggleMenu);
+
+		function toggleMenu () {
+			if (sidebar.classList.contains("open")) {
+				sidebar.classList.remove("open");
+			} else {
+				sidebar.classList.add("open");
+			}
+		}
+	}
+
+}
