@@ -18,6 +18,7 @@
 @import "_index";
 @import "_catalog";
 @import "_product";
+@import "_contacts";
 
 *{
   outline: none;
@@ -53,6 +54,18 @@ body{
   main {
     flex: 1 0 auto;
   }
+
+  a {
+    color: $therd_color;
+    opacity: 1;
+    @media (min-width: 992px) {
+      transition: all $animation_speed;
+      &:hover {
+        opacity: .75;
+      }
+    }
+  }
+
   h1, h2, h3, h4, h5, h6 {
     font-family: $title_font;
     line-height: 1;
@@ -64,6 +77,11 @@ body{
     color: $therd_color;
     position: relative;
     z-index: 2;
+    &.m-0{
+      * {
+        margin: 0!important;
+      }
+    }
     &.white {
       color: $main_color;
     }
@@ -76,7 +94,7 @@ body{
     h1 {
       font-size: 52px;
       margin-bottom: 20px;
-      @media (min-width: 768px) {
+      @media (min-width: 992px) {
         font-size: 64px;
         margin-bottom: 30px;
       }
@@ -84,7 +102,7 @@ body{
     h2 {
       font-size: 64px;
       margin-bottom: 20px;
-      @media (min-width: 768px) {
+      @media (min-width: 992px) {
         font-size: 128px;
         margin-bottom: 40px;
       }
@@ -92,16 +110,26 @@ body{
     h3 {
       font-size: 52px;
       margin-bottom: 15px;
-      @media (min-width: 768px) {
+      @media (min-width: 992px) {
         font-size: 64px;
         margin-bottom: 30px;
       }
     }
     h4 {
       font-size: 24px;
-      @media (min-width: 768px) {
+      @media (min-width: 992px) {
         font-size: 40px;
       }
+    }
+  }
+
+  .subtitle {
+    margin-bottom: 30px;
+    span {
+      display: block;
+      font-weight: 400;
+      font-size: 20px;
+      line-height: 1.4;
     }
   }
 
@@ -159,6 +187,8 @@ body{
     overflow: hidden;
     color: $main_color;
     font-size: 16px;
+    border: 0;
+    cursor: pointer;
     span {
       display: block;
       font-weight: 500;
@@ -210,6 +240,76 @@ body{
       span {
         font-weight: 400;
         font-family: $helping_font;
+      }
+    }
+  }
+
+  form {
+    .row {
+      & > * {
+        & + * {
+          margin-top: 20px;
+          @media (min-width: 768px) {
+            margin-top: 0;
+          }
+        }
+      }
+    }
+    .item {
+      span {
+        display: block;
+        font-size: 16px;
+        line-height: 1;
+        color: $therd_color;
+        opacity: 0.55;
+        margin-bottom: 10px;
+      }
+      input, textarea {
+        display: block;
+        width: 100%;
+        background: $main_color;
+        border: 1px solid rgba(0, 0, 0, 0.1);
+        padding: 12px 15px;
+        font-size: 16px;
+        line-height: 1.4;
+        color: $therd_color;
+      }
+      textarea {
+        height: 144px;
+        resize: none;
+      }
+      & + .item {
+        margin-top: 20px;
+      }
+    }
+
+    .button_line {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 20px;
+      & > * {
+        width: 100%;
+      }
+      @media (min-width: 992px) {
+        margin-top: 43px;
+        & > * {
+          width: calc(50% - 15px);
+        }
+      }
+      div {
+        font-size: 16px;
+        line-height: 1.4;
+        letter-spacing: -0.01em;
+        color: rgba(0, 0, 0, 0.5);
+        margin-bottom: 10px;
+        @media (min-width: 992px) {
+          margin-bottom: 0;
+        }
+      }
+      .button {
+
       }
     }
   }

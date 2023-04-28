@@ -89,7 +89,7 @@ export function openFilter(){
 	if (openCatalog) {
 		openCatalog.addEventListener("click", toggleMenu);
 
-		closeButton.addEventListener("click", toggleMenu);
+		openCatalog.addEventListener("click", toggleMenu);
 
 		function toggleMenu () {
 			if (sidebar.classList.contains("open")) {
