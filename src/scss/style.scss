@@ -19,6 +19,7 @@
 @import "_catalog";
 @import "_product";
 @import "_contacts";
+@import "_text-page";
 
 *{
   outline: none;
@@ -226,6 +227,7 @@ body{
     }
     @media (min-width: 992px) {
       &:hover {
+        opacity: 1!important;
         &::before {
           opacity: .5;
           border-width: 5px;
@@ -273,6 +275,12 @@ body{
         font-size: 16px;
         line-height: 1.4;
         color: $therd_color;
+        @media (min-width: 992px) {
+          transition: all $animation_speed;
+        }
+        &:focus {
+          border-color: rgba(0, 0, 0, 0.3);
+        }
       }
       textarea {
         height: 144px;
