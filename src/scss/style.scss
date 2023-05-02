@@ -72,6 +72,10 @@ body{
     line-height: 1;
   }
 
+  .container {
+    position: relative;
+  }
+
   .title {
     font-weight: 700;
     line-height: 90%;
@@ -124,13 +128,22 @@ body{
     }
   }
 
-  .subtitle {
-    margin-bottom: 30px;
-    span {
-      display: block;
-      font-weight: 400;
-      font-size: 20px;
-      line-height: 1.4;
+  .block_bg_title {
+    position: absolute;
+    right: 0;
+    top: -20px;
+    color: $therd_color;
+    white-space: nowrap;
+    font-weight: 700;
+    font-size: 128px;
+    font-family: $title_font;
+    line-height: 1;
+    writing-mode: vertical-lr;
+    z-index: -3;
+    opacity: 0.05;
+    @media (min-width: 992px) {
+      font-size: 200px;
+      top: -100px;
     }
   }
 
