@@ -28,6 +28,7 @@
 
 html {
   height: 100%;
+  overflow-x: hidden;
 }
 
 body{
@@ -65,6 +66,10 @@ body{
         opacity: .75;
       }
     }
+  }
+
+  button, input, textarea {
+    appearance: none;
   }
 
   h1, h2, h3, h4, h5, h6 {
@@ -331,6 +336,73 @@ body{
       }
       .button {
 
+      }
+    }
+  }
+}
+
+.popup-fade {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 100;
+  background: rgba($therd_color, .5);
+  display: none;
+  .popup {
+    position: absolute;
+    padding: 25px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90vw;
+    max-width: 350px;
+    max-height: 90vh;
+    overflow: auto;
+    background: $main_color;
+    .popup-close {
+      font-size: 0;
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 28px;
+      padding: 3px 0px;
+      line-height: 1;
+      text-align: center;
+      background-color: $focus_color;
+      color: $main_color;
+      border: 0;
+      &::before {
+        content: "x";
+        display: block;
+        font-size: 22px;
+      }
+      @media (min-width: 992px) {
+        transition: all $animation_speed;
+        &:hover {
+          opacity: 0.7;
+        }
+      }
+    }
+    .title {
+
+    }
+    form {
+      .row {
+        & > div + div {
+          margin-top: 15px;
+        }
+      }
+    }
+    .button_line {
+      margin-top: 15px;
+      display: block;
+      & > * {
+        width: 100%;
+      }
+      button {
+        margin-top: 15px;
       }
     }
   }

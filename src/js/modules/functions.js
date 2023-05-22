@@ -61,7 +61,7 @@ export function openMenu(){
 
 /* Меню второго порядка */
 export function sidebarToggles(){
-	const sidebarItems = document.querySelectorAll('.sidebar .item');
+	const sidebarItems = document.querySelectorAll('.sidebar .item .drop');
 
 	if (sidebarItems) {
 		sidebarItems.forEach(function (item) {
@@ -70,10 +70,11 @@ export function sidebarToggles(){
 		});
 
 		function toggleItem () {
-			if (this.classList.contains("open")) {
-				this.classList.remove("open");
+			let itemParent = this.closest('.item');
+			if (itemParent.classList.contains("open")) {
+				itemParent.classList.remove("open");
 			} else {
-				this.classList.add("open");
+				itemParent.classList.add("open");
 			}
 		}
 	}

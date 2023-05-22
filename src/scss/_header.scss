@@ -151,7 +151,7 @@
       overflow: initial;
     }
     a,
-    & > div > span {
+    & > div > a {
       font-weight: 500;
       font-size: 14px;
       line-height: 20px;
@@ -165,7 +165,7 @@
       }
     }
     & > a,
-    & > div > span {
+    & > div > a {
       display: flex;
       justify-content: center;
       position: relative;
@@ -214,7 +214,7 @@
         }
       }
 
-      & > span {
+      & > a {
         height: 100%;
         display: flex;
         flex-wrap: nowrap;
@@ -234,8 +234,8 @@
         }
       }
 
-      &.open {
-        & > span {
+      &:hover {
+        & > a {
           &::after {
             transform: rotate(180deg);
           }
